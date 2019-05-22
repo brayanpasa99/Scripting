@@ -1,0 +1,16 @@
+#!/bin/bash
+
+RUTA=$(pwd)
+ARCHIVOS=$(ls $RUTA | grep -E '(á|é|í|ó|ú|ñ)')
+#ARCHIVOS=$(ls $RUTA | grep -E [^'script.sh'])
+
+convertir='áéíóúñÁÉÍÓÚÑ'
+convertidas='aeiounAEIOUN'
+
+for file in $ARCHIVOS;
+    do
+        modificadoO
+=(echo "$file" | sed 'y/áéíóúñÁÉÍÓÚÑ/aeiounAEIOUN/')
+	$file = $modificado
+
+done
